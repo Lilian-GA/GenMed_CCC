@@ -13,3 +13,5 @@ dependencies:
   - pip
   - pip:
       - commot
+      - h5py
+      - scanpy
