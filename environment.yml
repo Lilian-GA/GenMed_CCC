@@ -16,3 +16,4 @@ dependencies:
       - h5py
       - scanpy
       - rds2py
+      - cell2location
