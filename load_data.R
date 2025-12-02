@@ -1,5 +1,7 @@
+install.packages("Seurat")
 library(Seurat)
 install.packages("remotes")
+
 remotes::install_github("mojaveazure/seurat-disk")
 library(SeuratData)
 
