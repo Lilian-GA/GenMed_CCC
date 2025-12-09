@@ -1,0 +1,9 @@
+export PIP_NO_CACHE_DIR=1
+export PIP_CACHE_DIR=/tmp/pip_cache
+export TMPDIR=/tmp
+
+conda create -n ccc python=3.9
+conda activate ccc
+pip install torch pandas seaborn matplotlib rds2py cell2location scanpy commot --no-cache-dir
+
+python multi_train.py > run_all.log 2>&1
