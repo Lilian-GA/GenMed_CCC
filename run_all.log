@@ -1,0 +1,19 @@
+Begining process
+Process ForkPoolWorker-3:
+Process ForkPoolWorker-1:
+Traceback (most recent call last):
+  File "/home/hmdang/Documents/5BS/genomique_medical/GenMed_CCC/multi_train.py", line 96, in <module>
+    run_all_pairs(pairs, n_jobs=2)
+  File "/home/hmdang/Documents/5BS/genomique_medical/GenMed_CCC/multi_train.py", line 77, in run_all_pairs
+    pool.starmap(run_cell2location, pairs)
+  File "/opt/anaconda3/envs/ccc/lib/python3.9/multiprocessing/pool.py", line 372, in starmap
+    return self._map_async(func, iterable, starmapstar, chunksize).get()
+  File "/opt/anaconda3/envs/ccc/lib/python3.9/multiprocessing/pool.py", line 765, in get
+    self.wait(timeout)
+  File "/opt/anaconda3/envs/ccc/lib/python3.9/multiprocessing/pool.py", line 762, in wait
+    self._event.wait(timeout)
+  File "/opt/anaconda3/envs/ccc/lib/python3.9/threading.py", line 581, in wait
+    signaled = self._cond.wait(timeout)
+  File "/opt/anaconda3/envs/ccc/lib/python3.9/threading.py", line 312, in wait
+    waiter.acquire()
+KeyboardInterrupt
