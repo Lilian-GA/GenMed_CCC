@@ -3,7 +3,7 @@ library(SeuratDisk)
 library(reticulate)
 
 # Charger l'objet
-obj <- readRDS("data/data_rds/HT224P1-S1Fc2U1Z1Bs1-SeuratObj.rds")
+obj <- readRDS("data/data_rds/HT259P1-S1H1Fc2U1Z1Bs1-SeuratObj.rds")
 DefaultAssay(obj) <- "Spatial"
 
 # Créer un nouvel objet Seurat minimal pour Scanpy
@@ -31,5 +31,5 @@ if (!is.null(obj@reductions$pca)) new_obj[["pca"]] <- obj@reductions$pca
 if (!is.null(obj@reductions$umap)) new_obj[["umap"]] <- obj@reductions$umap
 
 # Exporter h5ad directement via SeuratDisk (sans image)
-SaveH5Seurat(new_obj, filename = "data/HT224P1_minimal.h5seurat", overwrite = TRUE)
-Convert("data/HT224P1_minimal.h5seurat", dest = "h5ad")
+SaveH5Seurat(new_obj, filename = "data/HT259P1-S1H1Fc2U1Z1Bs1-SeuratObj.h5seurat", overwrite = TRUE)
+Convert("data/HT259P1-S1H1Fc2U1Z1Bs1-SeuratObj.h5seurat", dest = "h5ad")
