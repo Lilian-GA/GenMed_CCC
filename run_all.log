@@ -1,19 +1,16 @@
-Begining process
-Process ForkPoolWorker-3:
-Process ForkPoolWorker-1:
-Traceback (most recent call last):
-  File "/home/hmdang/Documents/5BS/genomique_medical/GenMed_CCC/multi_train.py", line 96, in <module>
-    run_all_pairs(pairs, n_jobs=2)
-  File "/home/hmdang/Documents/5BS/genomique_medical/GenMed_CCC/multi_train.py", line 77, in run_all_pairs
-    pool.starmap(run_cell2location, pairs)
-  File "/opt/anaconda3/envs/ccc/lib/python3.9/multiprocessing/pool.py", line 372, in starmap
-    return self._map_async(func, iterable, starmapstar, chunksize).get()
-  File "/opt/anaconda3/envs/ccc/lib/python3.9/multiprocessing/pool.py", line 765, in get
-    self.wait(timeout)
-  File "/opt/anaconda3/envs/ccc/lib/python3.9/multiprocessing/pool.py", line 762, in wait
-    self._event.wait(timeout)
-  File "/opt/anaconda3/envs/ccc/lib/python3.9/threading.py", line 581, in wait
-    signaled = self._cond.wait(timeout)
-  File "/opt/anaconda3/envs/ccc/lib/python3.9/threading.py", line 312, in wait
-    waiter.acquire()
-KeyboardInterrupt
+-------------------- Beginning process ------------------
+GPU available: True (mps), used: False
+TPU available: False, using: 0 TPU cores
+HT224P1-S1
+########################################################################
+########################################################################
+[INFO] Traitement du couple : HT224P1-S1__HT224P1-S1Fc2U1Z1Bs1-SeuratObj
+--------------- Training single cell reference -----------------------
+Training:   0%|          | 0/1000 [00:00<?, ?it/s]Epoch 1/1000:   0%|          | 0/1000 [00:00<?, ?it/s]GPU available: True (mps), used: False
+TPU available: False, using: 0 TPU cores
+HT259P1-S1H1
+########################################################################
+########################################################################
+[INFO] Traitement du couple : HT259P1-S1H1__HT259P1-S1H1Fc2U1Z1Bs1-SeuratObj
+--------------- Training single cell reference -----------------------
+Training:   0%|          | 0/1000 [00:00<?, ?it/s]Epoch 1/1000:   0%|          | 0/1000 [00:00<?, ?it/s]Epoch 1/1000:   0%|          | 1/1000 [00:13<3:37:47, 13.08s/it]Epoch 1/1000:   0%|          | 1/1000 [00:13<3:37:47, 13.08s/it, v_num=1]Epoch 2/1000:   0%|          | 1/1000 [00:13<3:37:47, 13.08s/it, v_num=1]Epoch 2/1000:   0%|          | 2/1000 [00:25<3:30:55, 12.68s/it, v_num=1]Epoch 2/1000:   0%|          | 2/1000 [00:25<3:30:55, 12.68s/it, v_num=1, elbo_train=2.44e+7]Epoch 3/1000:   0%|          | 2/1000 [00:25<3:30:55, 12.68s/it, v_num=1, elbo_train=2.44e+7]Epoch 1/1000:   0%|          | 1/1000 [00:23<6:34:43, 23.71s/it]Epoch 1/1000:   0%|          | 1/1000 [00:23<6:34:43, 23.71s/it, v_num=1]Epoch 2/1000:   0%|          | 1/1000 [00:23<6:34:43, 23.71s/it, v_num=1]Epoch 3/1000:   0%|          | 3/1000 [00:36<3:16:48, 11.84s/it, v_num=1, elbo_train=2.44e+7]Epoch 3/1000:   0%|          | 3/1000 [00:36<3:16:48, 11.84s/it, v_num=1, elbo_train=2.51e+7]Epoch 4/1000:   0%|          | 3/1000 [00:36<3:16:48, 11.84s/it, v_num=1, elbo_train=2.51e+7]Epoch 2/1000:   0%|          | 2/1000 [00:46<6:29:42, 23.43s/it, v_num=1]Epoch 2/1000:   0%|          | 2/1000 [00:46<6:29:42, 23.43s/it, v_num=1, elbo_train=4.22e+7]Epoch 3/1000:   0%|          | 2/1000 [00:46<6:29:42, 23.43s/it, v_num=1, elbo_train=4.22e+7]Epoch 4/1000:   0%|          | 4/1000 [00:49<3:26:31, 12.44s/it, v_num=1, elbo_train=2.51e+7]Epoch 4/1000:   0%|          | 4/1000 [00:49<3:26:31, 12.44s/it, v_num=1, elbo_train=2.42e+7]Epoch 5/1000:   0%|          | 4/1000 [00:49<3:26:31, 12.44s/it, v_num=1, elbo_train=2.42e+7]Epoch 5/1000:   0%|          | 5/1000 [01:08<4:02:20, 14.61s/it, v_num=1, elbo_train=2.42e+7]Epoch 5/1000:   0%|          | 5/1000 [01:08<4:02:20, 14.61s/it, v_num=1, elbo_train=2.47e+7]Epoch 6/1000:   0%|          | 5/1000 [01:08<4:02:20, 14.61s/it, v_num=1, elbo_train=2.47e+7]Epoch 3/1000:   0%|          | 3/1000 [01:14<7:02:41, 25.44s/it, v_num=1, elbo_train=4.22e+7]Epoch 3/1000:   0%|          | 3/1000 [01:14<7:02:41, 25.44s/it, v_num=1, elbo_train=4.17e+7]Epoch 4/1000:   0%|          | 3/1000 [01:14<7:02:41, 25.44s/it, v_num=1, elbo_train=4.17e+7]Epoch 6/1000:   1%|          | 6/1000 [01:18<3:40:06, 13.29s/it, v_num=1, elbo_train=2.47e+7]Epoch 6/1000:   1%|          | 6/1000 [01:18<3:40:06, 13.29s/it, v_num=1, elbo_train=2.4e+7] Epoch 7/1000:   1%|          | 6/1000 [01:18<3:40:06, 13.29s/it, v_num=1, elbo_train=2.4e+7]Epoch 7/1000:   1%|          | 7/1000 [01:29<3:25:32, 12.42s/it, v_num=1, elbo_train=2.4e+7]Epoch 7/1000:   1%|          | 7/1000 [01:29<3:25:32, 12.42s/it, v_num=1, elbo_train=2.41e+7]Epoch 8/1000:   1%|          | 7/1000 [01:29<3:25:32, 12.42s/it, v_num=1, elbo_train=2.41e+7]Epoch 4/1000:   0%|          | 4/1000 [01:35<6:28:59, 23.43s/it, v_num=1, elbo_train=4.17e+7]Epoch 4/1000:   0%|          | 4/1000 [01:35<6:28:59, 23.43s/it, v_num=1, elbo_train=4.16e+7]Epoch 5/1000:   0%|          | 4/1000 [01:35<6:28:59, 23.43s/it, v_num=1, elbo_train=4.16e+7]Epoch 8/1000:   1%|          | 8/1000 [01:39<3:13:47, 11.72s/it, v_num=1, elbo_train=2.41e+7]Epoch 8/1000:   1%|          | 8/1000 [01:39<3:13:47, 11.72s/it, v_num=1, elbo_train=2.44e+7]Epoch 9/1000:   1%|          | 8/1000 [01:39<3:13:47, 11.72s/it, v_num=1, elbo_train=2.44e+7]Epoch 9/1000:   1%|          | 9/1000 [01:50<3:08:01, 11.38s/it, v_num=1, elbo_train=2.44e+7]Epoch 9/1000:   1%|          | 9/1000 [01:50<3:08:01, 11.38s/it, v_num=1, elbo_train=2.39e+7]Epoch 10/1000:   1%|          | 9/1000 [01:50<3:08:01, 11.38s/it, v_num=1, elbo_train=2.39e+7]
