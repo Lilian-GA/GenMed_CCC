@@ -1,6 +1,4 @@
-install.packages("Seurat")
 library(Seurat)
-
 library(SeuratDisk)
 
 #Pancreas : HT224P1
@@ -12,25 +10,33 @@ SaveH5Seurat(obj, filename = "data/HT224P1-S1.h5seurat")
 Convert("data/HT224P1-S1.h5seurat", dest = "h5ad")
 
 
+convert_seurat_to_h5ad <- function(
+  rds_path,
+  h5seurat_path
+) {
 
-obj <- readRDS("data/snRNA_L4__HT425B1-S1H1_combo.rds")
-DefaultAssay(obj)
-DefaultAssay(obj) <- "RNA"
-obj[["SCT"]] <- NULL
-SaveH5Seurat(obj, filename = "data/snRNA_L4__HT425B1-S1H1_combo.h5seurat")
-Convert("data/snRNA_L4__HT425B1-S1H1_combo.h5seurat", dest = "h5ad")
+  message("Lecture du fichier RDS…")
+  obj <- readRDS(rds_path)
 
-obj <- readRDS("data/data_rds/HT259P1-S1H1.rds")
-DefaultAssay(obj)
-DefaultAssay(obj) <- "RNA"
-obj[["SCT"]] <- NULL
-SaveH5Seurat(obj, filename = "data/HT259P1-S1H1.h5seurat")
-Convert("data/HT259P1-S1H1.h5seurat", dest = "h5ad")
+  message("Assay par défaut actuel : ", DefaultAssay(obj))
+  DefaultAssay(obj) <- "RNA"
+  message("Assay par défaut fixé à 'RNA'")
 
-obj <- readRDS("data/data_rds/snRNA_L4__HT243B1-H3A2.rds")
-DefaultAssay(obj)
-DefaultAssay(obj) <- "RNA"
-obj[["SCT"]] <- NULL
-SaveH5Seurat(obj, filename = "data/snRNA_L4__HT243B1-H3A2.h5seurat")
-Convert("data/snRNA_L4__HT243B1-H3A2.h5seurat", dest = "h5ad")
+  if ("SCT" %in% names(obj@assays)) {
+    obj[["SCT"]] <- NULL
+    message("Assay SCT supprimé")
+  } else {
+    message("Aucun assay SCT à supprimer")
+  }
 
+  message("Sauvegarde en h5seurat : ", h5seurat_path)
+  SaveH5Seurat(obj, filename = h5seurat_path, overwrite = TRUE)
+
+  message("Conversion en h5ad : ", h5ad_path)
+  Convert(h5seurat_path, dest = "h5ad", overwrite = TRUE)
+
+  message("Conversion terminée ! Fichiers créés :")
+  message("   - ", h5seurat_path)
+}
+
+convert_seurat_to_h5ad()
