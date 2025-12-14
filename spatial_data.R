@@ -61,3 +61,8 @@ convert_seurat_spatial_to_h5ad <- function(
   message("Conversion terminée avec succès !")
 }
 
+
+obj <- readRDS("data/data_rds/HT224P1-S1Fc2U1Z1Bs1-SeuratObj.rds")
+
+DefaultAssay(obj) <- "Spatial"
+png::writePNG(obj@images$slice1@image, "histology_pancreas_224.png")
